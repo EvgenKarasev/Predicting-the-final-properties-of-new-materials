@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<table align="center" cellpadding="5" cellspacing="5" width="500px">
+	<tbody>
+		<tr>
+			<th align="center"><span style="font-size: 18px;">Расчет модуля упругости при растяжении, ГПа</th>
+		</tr>
+
+		<th>Заполните необходимые ячейки</th>
+
+	</tbody>
+</table>
+</head>
+<body>
+<form action="/" method="POST">
+<table align="center" border="3" cellpadding="5" cellspacing="5" width="500px">
+	<tbody>
+		<tr>
+			<td><label for="priznak1">Угол нашивки, град</label></td>
+			<td><input type="float" name="priznak1" type="float"></td>
+		</tr>
+		<tr>
+			<td><label for="priznak2">Шаг нашивки</label></td>
+			<td><input name="priznak2" type="float"></td>
+		</tr>
+		<tr>
+			<td><label for="priznak3">Плотность нашивки</label> </td>
+			<td><input name="priznak3" type="float"></td>
+		</tr>
+		<tr>
+			<td><label for="priznak4">Соотношение матрица-наполнитель</label> </td>
+			<td><input name="priznak4" type="float"></td>
+		</tr>
+		<tr>
+			<td><label for="priznak5">Плотность, кг/м3</label></td>
+			<td><input name="priznak5" type="float"></td>
+		</tr>
+		<tr>
+			<td><label for="priznak6">Модуль упругости, ГПа</label> </td>
+			<td><input name="priznak6" type="float"></td>
+		</tr>
+		<tr>
+			<td><label for="priznak7">Количество отвердителя, м.%</label></td>
+			<td><input name="priznak7" type="float"></td>
+		</tr>
+		<tr>
+			<td><label for="priznak8">Содержание эпоксидных групп,%_2</label></td>
+			<td><input name="priznak8" type="float"></td>
+		</tr>
+		<tr>
+			<td><label for="priznak9">Температура вспышки, С_2</label></td>
+			<td><input name="priznak9" type="float"></td>
+		</tr>
+		<tr>
+			<td><label for="priznak10">Поверхностная плотность, г/м2</label> </td>
+			<td><input name="priznak10" type="float"></td>
+		</tr>
+		<tr>
+			<td><label for="priznak11">Прочность при растяжении, МПа</label></td>
+			<td><input name="priznak11" type="float"></td>
+		</tr>
+		<tr>
+			<td><label for="priznak12">Потребление смолы, г/м2</label></td>
+			<td><input name="priznak12" type="float"></td>
+		</tr>
+	</tbody>
+<table align="center" cellpadding="5" cellspacing="5" width="500px">
+	<tbody>
+		<tr>
+			<td style="text-align: center;"><p>
+            <input type="submit" value="Рассчитать">
+            </p></td>
+		</tr>
+	</tbody>
+</table>
+</table>
+</form>
+
+<table align="center" border="3" cellpadding="5" cellspacing="5" width="500px">
+	<tbody>
+		<tr>
+			<th align="center">Модуль упругости при растяжении в ГПа ожидается в размере:</th>
+		</tr>
+	</tbody>
+
+	<tbody>
+		<tr>
+			<th align="center">   
+			{% if message %}
+			<p>{{ message }}</p>
+			{% endif %}
+			</th>
+		</tr>
+	</tbody>
+</table>
+
+</body>
